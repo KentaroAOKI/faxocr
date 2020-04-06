@@ -23,7 +23,9 @@ if [ "$SERVER_TYPE" = "aws" -a ! -z "$AWS_ADDRESS" ]; then
     wget -O $EC2USERDATA http://$AWS_ADDRESS/latest/user-data/ >/dev/null 2>&1
     . $EC2USERDATA
     rm $EC2USERDATA
+fi
 
+if [ "$SERVER_TYPE" = "aws" -o "$SERVER_TYPE" = "docker" ]; then
     # for compatibility
     if [ ! -z "$FAXFROMADDR" ]; then
 	FAX_SEND_FROM=$FAXFROMADDR
