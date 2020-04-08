@@ -7,8 +7,8 @@
 
 # get configuration
 
-CONF_FILE=~faxocr/etc/faxocr.conf
-CONF_PROC=~faxocr/bin/doconfig.sh
+CONF_FILE=/home/faxocr/etc/faxocr.conf
+CONF_PROC=/home/faxocr/bin/doconfig.sh
 
 . $CONF_FILE
 . $CONF_PROC

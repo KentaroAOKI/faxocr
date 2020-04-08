@@ -2,8 +2,8 @@
 
 set -u
 
-CONF_FILE=~faxocr/etc/faxocr.conf
-UTIL_FILE=~faxocr/bin/procfax_utils.sh
+CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
+UTIL_FILE=/home/faxocr/faxocr/bin/procfax_utils.sh
 
 . $CONF_FILE
 . $UTIL_FILE

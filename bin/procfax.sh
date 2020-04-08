@@ -7,9 +7,9 @@ export PATH=/usr/local/bin:/usr/sbin:/home/faxocr/bin/:"$PATH"
 #
 # import configuration
 #
-CONF_FILE=~faxocr/etc/faxocr.conf
-CONF_PROC=~faxocr/bin/doconfig.sh
-UTIL_FILE=~faxocr/bin/procfax_utils.sh
+CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
+CONF_PROC=/home/faxocr/faxocr/bin/doconfig.sh
+UTIL_FILE=/home/faxocr/faxocr/bin/procfax_utils.sh
 
 . $CONF_FILE
 . $CONF_PROC

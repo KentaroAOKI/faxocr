@@ -4,8 +4,8 @@ export PATH=/usr/local/bin:/usr/sbin:$PATH
 
 # get configuration
 
-CONF_FILE=~faxocr/etc/faxocr.conf
-CONF_PROC=~faxocr/bin/doconfig.sh
+CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
+CONF_PROC=/home/faxocr/faxocr/bin/doconfig.sh
 
 . $CONF_FILE
 . $CONF_PROC
