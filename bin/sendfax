@@ -15,7 +15,9 @@
 CONF_FILE=~faxocr/etc/faxocr.conf
 CONF_PROC=~faxocr/bin/doconfig.sh
 
-. $CONF_FILE
+if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
+  . $CONF_FILE
+fi
 . $CONF_PROC
 
 FAX_NO=$1

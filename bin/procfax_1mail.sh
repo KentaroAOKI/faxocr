@@ -5,7 +5,9 @@ set -u
 CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
 UTIL_FILE=/home/faxocr/faxocr/bin/procfax_utils.sh
 
-. $CONF_FILE
+if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
+  . $CONF_FILE
+fi
 . $UTIL_FILE
 
 if [ x"$DEBUG_MODE" = x'true' ]; then

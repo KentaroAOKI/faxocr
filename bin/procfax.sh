@@ -11,7 +11,9 @@ CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
 CONF_PROC=/home/faxocr/faxocr/bin/doconfig.sh
 UTIL_FILE=/home/faxocr/faxocr/bin/procfax_utils.sh
 
-. $CONF_FILE
+if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
+  . $CONF_FILE
+fi
 . $CONF_PROC
 . $UTIL_FILE
 

@@ -7,7 +7,9 @@ export PATH=/usr/local/bin:/usr/sbin:$PATH
 CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
 CONF_PROC=/home/faxocr/faxocr/bin/doconfig.sh
 
-. $CONF_FILE
+if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
+  . $CONF_FILE
+fi
 . $CONF_PROC
 
 SURVEYID=$1
