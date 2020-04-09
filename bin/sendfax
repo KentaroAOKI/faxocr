@@ -12,8 +12,8 @@
 
 # get configuration
 
-CONF_FILE=~faxocr/etc/faxocr.conf
-CONF_PROC=~faxocr/bin/doconfig.sh
+CONF_FILE=/home/faxocr/etc/faxocr.conf
+CONF_PROC=/home/faxocr/bin/doconfig.sh
 
 if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
   . $CONF_FILE
@@ -25,7 +25,7 @@ FAX_SUBJ=$2
 FAX_IMG=$3
 FAX_TO=$FAX_NO"@"$FAX_SEND_TARGET
 
-cd ~faxocr
+cd /home/faxocr
 echo "`date +%Y/%m/%d\ %H:%M:%S` to=$FAX_NO subject=$FAX_SUBJ via=$FAX_SEND_TYPE" >> $DIR_FAX/Log/sendfax.log
 
 case "$FAX_SEND_TYPE" in

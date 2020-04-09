@@ -72,6 +72,10 @@ fi
 
 ERROR_PDF_FILE_FOR_FAX_SENDER=${ERRORPDF:="/home/faxocr/etc/error.pdf"}
 
+if [ -z "$BIZFAX_PROGRAM" ] ; then
+    BIZFAX_PROGRAM="/home/faxocr/bin/bizfax-sendfax"
+fi
+
 if [ -z "$BIZFAX_FAX_SIZE" ] ; then
     BIZFAX_FAX_SIZE="A4"
 fi
