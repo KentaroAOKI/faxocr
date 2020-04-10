@@ -44,7 +44,7 @@ fi
 # retrieve fax from a pop server
 #
 if [ "$FAX_RECV_SETTING" = "pop3" ]; then
-	sh /home/fax/getfax
+	sh /home/faxocr/bin/getfax
 	show_cmd_result $? retrieving Fax via a pop server
 fi
 

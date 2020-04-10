@@ -92,7 +92,7 @@ GNU_PARALLEL_LEVEL=${JOB_PARALLEL_LEVEL:="100%"}
 
 # Directory setting (No need to edit)
 DIR_RAILS="/home/faxocr/rails"
-DIR_MAIL="./home/faxocr/Maildir/new"
+DIR_MAIL="/home/faxocr/Maildir/new"
 DIR_FAX="/home/faxocr/Faxsystem"
 
 DATE=`date +%Y%m%d`
