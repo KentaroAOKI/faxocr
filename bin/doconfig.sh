@@ -70,6 +70,10 @@ if [ -z "$SMTP_HOST" ] ; then
     SMTP_HOST="no"
 fi
 
+if [ -z "$FAX_RECV_SETTING" ] ; then
+    FAX_RECV_SETTING="pop3"
+fi
+
 ERROR_PDF_FILE_FOR_FAX_SENDER=${ERRORPDF:="/home/faxocr/etc/error.pdf"}
 
 if [ -z "$BIZFAX_PROGRAM" ] ; then
@@ -87,9 +91,9 @@ GNU_PARALLEL_LEVEL=${JOB_PARALLEL_LEVEL:="100%"}
 #
 
 # Directory setting (No need to edit)
-DIR_RAILS="./rails"
-DIR_MAIL="./Maildir/new"
-DIR_FAX="./Faxsystem"
+DIR_RAILS="/home/faxocr/rails"
+DIR_MAIL="./home/faxocr/Maildir/new"
+DIR_FAX="/home/faxocr/Faxsystem"
 
 DATE=`date +%Y%m%d`
 TIME=`date +%H%M%S`

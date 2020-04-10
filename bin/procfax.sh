@@ -7,9 +7,9 @@ export PATH=/usr/local/bin:/usr/sbin:/home/faxocr/bin/:"$PATH"
 #
 # import configuration
 #
-CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
-CONF_PROC=/home/faxocr/faxocr/bin/doconfig.sh
-UTIL_FILE=/home/faxocr/faxocr/bin/procfax_utils.sh
+CONF_FILE=/home/faxocr/etc/faxocr.conf
+CONF_PROC=/home/faxocr/bin/doconfig.sh
+UTIL_FILE=/home/faxocr/bin/procfax_utils.sh
 
 if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
   . $CONF_FILE
@@ -27,7 +27,7 @@ LOG_FILE_FOR_THIS_SESSION="$SESSION_LOG_DIR"/procfax.log
 #
 # set working directory of this script
 #
-cd ~faxocr
+cd /home/faxocr
 
 #
 # have not to run multiple instances
@@ -44,7 +44,7 @@ fi
 # retrieve fax from a pop server
 #
 if [ "$FAX_RECV_SETTING" = "pop3" ]; then
-	getfax
+	sh /home/fax/getfax
 	show_cmd_result $? retrieving Fax via a pop server
 fi
 
