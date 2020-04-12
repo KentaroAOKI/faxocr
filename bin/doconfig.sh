@@ -35,6 +35,10 @@ if [ "$SERVER_TYPE" = "aws" -o "$SERVER_TYPE" = "docker" ]; then
 	FAX_SEND_TARGET=$FAXTODOMAIN
     fi
 
+    if [ ! -z "$FAXSENDTYPE" ]; then
+    FAX_SEND_TYPE=$FAXSENDTYPE
+    fi
+
     POP3_HOST=$POP3HOST
     POP3_PORT=$POP3PORT
     POP3_USER=$POP3USER
