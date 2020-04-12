@@ -469,7 +469,7 @@ config_db = rails_prefix + "/config/database.yml"
 db_env = "{$rails_env}" || "development" # XXX
 cellinfo = Hash.new()
 
-ActiveRecord::Base.configurations = YAML.load_file(config_db)
+ActiveRecord::Base.configurations = YAML.load(ERB.new(Pathname.new(config_db).read).result)
 ActiveRecord::Base.establish_connection(db_env)
 
 Dir.glob(rails_prefix + '/app/models/*.rb').each do |model|
@@ -596,7 +596,7 @@ end
 # sheet_property generation
 #
 survey_properties = @survey.survey_properties
-survey_properties.each do |@survey_property|
+survey_properties.each do |survey_property| @survey_property = survey_property
 
   prop = cellinfo[@survey_property.id]
   if prop.nil? then
