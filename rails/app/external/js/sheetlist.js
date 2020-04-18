@@ -102,6 +102,15 @@ jQuery(document).ready(function($) {
 					'number': {
 						name:'数字',
 					},
+					'alphabet_lowercase': {
+						name:'英字（小文字）',
+					},
+					'alphabet_uppercase': {
+						name:'英字（大文字）',
+					},
+					'alphabet_number': {
+						name:'英数字',
+					},
 					'rating': {
 						name:'○☓△✓',
 					},
