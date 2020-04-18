@@ -153,7 +153,7 @@ do
 	ruby_code_generated_from_sheetreader="$FAX_BACKUP_DIR"/"$src_fax_number"_"$dest_fax_number"_"$DATE"_"$TIME"_"$pid"_"$sheet_count".rb
 
 	sheetreader -m rails -c "$SHEETREADER_CONF_DIR" $OCR_DIR -r "$dest_fax_number" -s "$src_fax_number" -p "$SHEETREADER_ANALYZE_DIR" \
-		"$resized_tiff_file" > "$ruby_code_generated_from_sheetreader"
+		-l "/home/faxocr/src/kocr/databases" "$resized_tiff_file" > "$ruby_code_generated_from_sheetreader"
 	sheetreader_exit_status=$?
 	if [ "$sheetreader_exit_status" -ne 0 ]; then
 		show_error_message SHEETREADER: ERROR: sheetreader returns non-zero value: "$sheetreader_exit_status"
