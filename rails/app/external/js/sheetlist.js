@@ -27,6 +27,9 @@ var enum_cell_type = {
 	'number': 1,
 	'rating': 2,
 	'image': 3,
+	'alphabet_lowercase': 4,
+	'alphabet_uppercase': 5,
+	'alphabet_number': 6,
 	'reset': -1,
 };
 var targetid;
@@ -102,6 +105,12 @@ jQuery(document).ready(function($) {
 					'number': {
 						name:'数字',
 					},
+					'rating': {
+						name:'○☓△✓',
+					},
+					'image': {
+						name:'画像',
+					},
 					'alphabet_lowercase': {
 						name:'英字（小文字）',
 					},
@@ -110,12 +119,6 @@ jQuery(document).ready(function($) {
 					},
 					'alphabet_number': {
 						name:'英数字',
-					},
-					'rating': {
-						name:'○☓△✓',
-					},
-					'image': {
-						name:'画像',
 					},
 					'sep1': "---------",
 					'reset': {

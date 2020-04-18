@@ -186,7 +186,10 @@ function put_config($file_id, $REQUEST, $target, $sheet_name, &$list_colspan)
 	$str_type = array(0 => "number",
 			  1 => "number",
 			  2 => "rating",
-			  3 => "image");
+			  3 => "image",
+			  4 => "alphabet_lowercase",
+			  5 => "alphabet_uppercase",
+			  6 => "alphabet_number");
 
 	$conf = new FileConf($file_id);
 
@@ -225,7 +228,7 @@ function put_config($file_id, $REQUEST, $target, $sheet_name, &$list_colspan)
 			$xls_fields["row"]       = $loc[2];
 			$xls_fields["col"]       = $loc[3];
 			$xls_fields["item_name"] = $val;
-			# number, rating, image
+			# number, rating, image, alphabet_lowercase, alphabet_uppercase, alphabet_number
 			$xls_fields["type"]       = $str_type[$loc[4]];
 
 			$location = "${loc[1]}-${loc[2]}-${loc[3]}";
