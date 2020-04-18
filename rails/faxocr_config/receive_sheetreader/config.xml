@@ -15,7 +15,7 @@
 		</mysql>
 		<rails>
 			<code>
-				<![CDATA[
+				<![CDATA[# coding: utf-8
 				#!/usr/bin/ruby
 				require "rubygems"
 				require "active_record"
@@ -25,7 +25,7 @@
 				echo_prefix = ARGV[2] || "./"
 				config_db = rails_prefix + "/config/database.yml"
 				db_env = ENV['RAILS_ENV'] || "development"
-				ActiveRecord::Base.configurations = YAML.load_file(config_db)
+				ActiveRecord::Base.configurations = YAML.load(ERB.new(Pathname.new(config_db).read).result)
 				ActiveRecord::Base.establish_connection(db_env)
 				Dir.glob(rails_prefix + '/app/models/*.rb').each do |model|
 				  load model

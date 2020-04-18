@@ -2,8 +2,8 @@
 
 set -u
 
-CONF_FILE=/home/faxocr/faxocr/etc/faxocr.conf
-UTIL_FILE=/home/faxocr/faxocr/bin/procfax_utils.sh
+CONF_FILE=/home/faxocr/etc/faxocr.conf
+UTIL_FILE=/home/faxocr/bin/procfax_utils.sh
 
 if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
   . $CONF_FILE
