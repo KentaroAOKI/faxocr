@@ -10,6 +10,8 @@ if [ -z "$SERVER_TYPE" -o $SERVER_TYPE = "default" ]; then
 fi
 . $UTIL_FILE
 
+DEBUG_MODE=false
+
 if [ x"$DEBUG_MODE" = x'true' ]; then
 	show_info_message "===== DEBUG MODE ====="
 fi
